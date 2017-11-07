@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/arrow-test.js"],"names":["x3","n","console","log"],"mappings":"aAAA,GAAMA,IAAK,QAALA,GAAK,CAACC,CAAD,QAAOA,GAAI,CAAX,EAAX,CAEAC,QAAQC,GAAR,CAAYH,GAAG,CAAH,CAAZ","file":"arrow-test.js","sourcesContent":["const x3 = (n) => n * 3\n\nconsole.log(x3(2))\n"]}
