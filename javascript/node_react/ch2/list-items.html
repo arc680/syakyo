@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root2"></div>
+    <div id="root"></div>
+    <script type="text/babel">
+      class RList extends React.Component {
+        render () {
+          console.log(this.props.items);
+          console.log(this.props.title);
+          const items = this.props.items.split(',')
+          const itemsObj = items.map((e) => {
+            return <li>{e}</li>
+          })
+          let title = this.props.title
+          if (!title) {
+            title = "LIST"
+          }
+          return (<div>
+            <h3>{title}</h3>
+            <ul>{itemsObj}</ul>
+          </div>)
+        }
+      }
+      ReactDOM.render(
+        <RList title="Colors" items="R,G,B,W" />,
+        document.getElementById('root')
+      )
+
+      const TestCompo = (props) => (
+        <div>
+          <h1>{props.title}</h1>
+        </div>
+      )
+      ReactDOM.render(
+        <TestCompo title="AAAAAAA" />,
+        document.getElementById('root2')
+      )
+    </script>
+  </body>
+</html>
